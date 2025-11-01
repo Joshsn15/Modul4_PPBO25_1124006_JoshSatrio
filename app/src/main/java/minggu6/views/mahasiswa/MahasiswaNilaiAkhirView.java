@@ -9,7 +9,7 @@ public class MahasiswaNilaiAkhirView {
         this.mahasiswaRepository = new MahasiswaRepository();
     }
     public void render() {
-        System.out.println("=== Print Nilai Akhir Mahasiswa ===");
+        System.out.println("== Print Nilai Akhir Mahasiswa ==");
         System.out.print("Masukkan NIM Mahasiswa: ");
         String nim = CLIUtil.getString();
         System.out.print("Masukkan Kode Mata Kuliah: ");

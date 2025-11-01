@@ -13,7 +13,7 @@ public class DosenRepository {
     
     public void printTotalJamMengajar(String nik){
         Connection conn = Database.connect();
-        String sql = "SELECT SUM(presensiStaff.jam) AS total_jam FROM presensistaff JOIN presensi  ON presensiStaff.idpresensistaff = presensi.idpresensi JOIN dosen  ON presensiStaff.idDosen = dosen.id JOIN staff  ON dosen.staff_id = staff.id WHERE staff.nik = ? AND presensi.status = TRUE";
+        String sql = "SELECT SUM(presensiStaff.jam) AS total_jam FROM presensistaff JOIN presensi  ON presensiStaff.idpresensistaff = presensi.idpresensi JOIN dosen  ON presensiStaff.idDosen = dosen.id JOIN staff  ON dosen.staff_id = staff.id WHERE staff.nik = ? AND presensi.status = 1";
         try{
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, nik);

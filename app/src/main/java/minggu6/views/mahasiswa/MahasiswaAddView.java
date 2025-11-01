@@ -13,7 +13,7 @@ public class MahasiswaAddView {
 
     public void render() {
         CLIUtil.getString();
-        System.out.println("=== Add New Mahasiswa ===");
+        System.out.println("= Add New Mahasiswa ==");
         System.out.print("NIM: ");
         String nim = CLIUtil.getString();
         System.out.print("Nama: ");

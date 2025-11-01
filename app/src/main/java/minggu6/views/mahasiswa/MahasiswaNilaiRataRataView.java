@@ -11,7 +11,7 @@ public class MahasiswaNilaiRataRataView {
     }
 
     public void render() {
-        System.out.println("=== Print Rata-Rata Nilai Akhir Mahasiswa ===");
+        System.out.println("== Print Rata-Rata Nilai Akhir Mahasiswa ==");
         System.out.print("Masukkan Kode Mata Kuliah: ");
         String kodeMK = CLIUtil.getString();
 

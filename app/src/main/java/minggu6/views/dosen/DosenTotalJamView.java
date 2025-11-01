@@ -10,13 +10,10 @@ public class DosenTotalJamView {
         this.dosenRepository = new DosenRepository();
     }
 
-    public void displayTotalJamMengajar(String nik) {
-        dosenRepository.printTotalJamMengajar(nik);
-    }
-
-    public void render(){
+    public void render() {
         System.out.print("Masukkan NIK Dosen: ");
         String nik = CLIUtil.getString();
-        displayTotalJamMengajar(nik);
+        dosenRepository.printTotalJamMengajar(nik);
+
     }
 }
