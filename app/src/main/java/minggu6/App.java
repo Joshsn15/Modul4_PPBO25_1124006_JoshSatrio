@@ -4,8 +4,9 @@
 package minggu6;
 
 
-import minggu6.controllers.MenuView;
-import minggu6.models.StatusPresensi;
+// import minggu6.views.MenuView;
+import minggu6.util.Database;
+import minggu6.views.MenuView;
 
 public class App {
     public String getGreeting() {
@@ -13,9 +14,15 @@ public class App {
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        // System.out.println(new App().getGreeting());
         MenuView menu = new MenuView();
         menu.render();
+        Database db = new Database();
+        db.connect();
+        // MahasiswaRepository mhsRepo = new MahasiswaRepository();
+        // mhsRepo.printNilaiAkhir("2102001", "IF101");
+
+
     }
 
 

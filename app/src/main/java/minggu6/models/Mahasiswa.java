@@ -3,8 +3,8 @@ package minggu6.models;
 public class Mahasiswa extends User {
     private String nim;
     private String Kodejurusan;
-    public Mahasiswa(String nim,String Kodejurusan,String nama, String tempatLahir, String tanggalLahir, String alamat, String telepon) {
-        super(UserType.MAHASISWA    , nama, tempatLahir, tanggalLahir,alamat,telepon);
+    public Mahasiswa(int id, String nim,String Kodejurusan,String nama, String tempatLahir, String tanggalLahir, String alamat, String telepon) {
+        super(id, UserType.MAHASISWA, nama, tempatLahir, tanggalLahir,alamat,telepon);
         this.nim = nim;
         this.Kodejurusan = Kodejurusan;
 

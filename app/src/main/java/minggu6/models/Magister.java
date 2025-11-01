@@ -6,9 +6,9 @@ public class Magister extends Mahasiswa {
     private ArrayList<MataKuliah> listMataKuliahAmbil;
     private String judulTesis;
 
-    public Magister(String nim, String kodejurusan, String nama, String tempatLahir, String tanggalLahir, String alamat,
+    public Magister(int id, String nim, String kodejurusan, String nama, String tempatLahir, String tanggalLahir, String alamat,
             String telepon, String judulTesis) {
-        super(nim, kodejurusan, nama, tempatLahir, tanggalLahir, alamat, telepon);
+        super(id, nim, kodejurusan, nama, tempatLahir, tanggalLahir, alamat, telepon);
         listMataKuliahAmbil = new ArrayList<>();
         this.judulTesis = judulTesis;
     }

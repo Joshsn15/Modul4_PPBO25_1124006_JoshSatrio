@@ -3,8 +3,8 @@ package minggu6.models;
 public class Doktor extends Mahasiswa {
     private String judulDisertasi;
     private double n1,n2,n3;
-    public Doktor(String nim, String Kodejurusan, String nama, String tempatLahir, String tanggalLahir, String alamat, String telepon, String judulDisertasi) {
-        super(nim, Kodejurusan, nama, tempatLahir, tanggalLahir, alamat, telepon);
+    public Doktor(int id, String nim, String Kodejurusan, String nama, String tempatLahir, String tanggalLahir, String alamat, String telepon, String judulDisertasi) {
+        super(id, nim, Kodejurusan, nama, tempatLahir, tanggalLahir, alamat, telepon);
         this.judulDisertasi = judulDisertasi;
         this.n1 = 0;
         this.n2 = 0;

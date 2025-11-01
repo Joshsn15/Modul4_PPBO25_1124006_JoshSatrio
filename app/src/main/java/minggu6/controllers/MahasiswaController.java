@@ -1,46 +1,50 @@
 package minggu6.controllers;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-
 import minggu6.models.Mahasiswa;
-import minggu6.util.Database;
+import minggu6.repository.MahasiswaRepository;
 
 public class MahasiswaController {
-    
-    public void addNew(String nim, String nama, String tempatLahir, String tanggalLahir, String alamat, String telepon) {
-        Connection conn = Database.connect();
-        String sql = "INSERT INTO mahasiswa(nim, nama, tempat_lahir, tanggal_lahir, alamat, telepon) VALUES(?,?,?,?,?,?)";
-        try{
-            PreparedStatement pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, nim);
-            pstmt.setString(2, nama);
-            pstmt.setString(3, tempatLahir);
-            pstmt.setString(4, tanggalLahir);
-            pstmt.setString(5, alamat);
-            pstmt.setString(6, telepon);
-            pstmt.executeUpdate();
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
+    MahasiswaRepository mahasiswaRepository;
+
+    public MahasiswaController() {
+        mahasiswaRepository = new MahasiswaRepository();
+    }
+
+    public void addNew(String nama, String nim, String Jurusan, String tempatLahir, String tanggalLahir, String alamat,
+            String telepon) {
+        mahasiswaRepository.add(nama, nim, Jurusan, tempatLahir, tanggalLahir, alamat, telepon);
+    }
+
+    public void delete(String nama, String nim) {
+        mahasiswaRepository.delete(nama, nim);
     };
 
-    public void delete() {
-    };
-
-    public void update() {
+    public void update(String nama, String nim, String Jurusan, String tempatLahir, String tanggalLahir, String alamat,
+            String telepon) {
+        mahasiswaRepository.update(nama, nim, Jurusan, tempatLahir, tanggalLahir, alamat, telepon);
     };
 
     public void print() {
+        mahasiswaRepository.printAllMhs();
     };
 
-    public Mahasiswa[] findAll() {
-        return new Mahasiswa[] {};
+
+    public void printNilaiAkhir(String nim, String kodeMK, String jenisMahasiswa) {
+        if (jenisMahasiswa.equalsIgnoreCase("Sarjana") || jenisMahasiswa.equalsIgnoreCase("Magister")) {
+            mahasiswaRepository.printNilaiAkhir(nim, kodeMK);
+            return;
+        } else {
+            mahasiswaRepository.printNilaiAkhirDoctor(nim);
+            return;
+        }
+    };
+
+    public void printRataRataNilaiAkhir(String kodeMK) {
+        mahasiswaRepository.printRataRataNilai(kodeMK);
     };
 
     public Mahasiswa get(String nim) {
         return null;
     };
-    
+
 }

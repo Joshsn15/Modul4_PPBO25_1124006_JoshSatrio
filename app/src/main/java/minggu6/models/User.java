@@ -1,6 +1,7 @@
 package minggu6.models;
 
 public abstract class User {
+    private int id;
     private String nama;
     private String tempatLahir;
     private String tanggalLahir;
@@ -8,7 +9,8 @@ public abstract class User {
     private String telepon;
     private UserType userType;
     
-    public User(UserType userType, String nama, String tempatLahir, String tanggalLahir, String alamat, String telepon) {
+    public User(int id, UserType userType, String nama, String tempatLahir, String tanggalLahir, String alamat, String telepon) {
+        this.id = id;
         this.nama = nama;
         this.tempatLahir = tempatLahir;
         this.tanggalLahir = tanggalLahir;

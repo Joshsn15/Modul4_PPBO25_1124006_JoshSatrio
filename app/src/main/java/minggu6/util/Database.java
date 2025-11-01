@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class Database {
-    public static final String DATABASE = "prak_pbo_modul4";
+    public static final String DATABASE = "minisia";
     public static final String HOST = "localhost";
     public static final String PORT = "5432";
     public static final String USER = "postgres";

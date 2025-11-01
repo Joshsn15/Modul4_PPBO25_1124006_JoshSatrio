@@ -4,9 +4,9 @@ public class Karyawan extends Staff {
     private String gaji;
     private PresensiStaff presensiStaff;
 
-    public Karyawan(String gaji, String nik, String nama, String tempatLahir, String tanggalLahir, String alamat,
+    public Karyawan(int id, String gaji, String nik, String nama, String tempatLahir, String tanggalLahir, String alamat,
             String telepon) {
-        super(nik, nama, tempatLahir, tanggalLahir, alamat, telepon);
+        super(id, nik, nama, tempatLahir, tanggalLahir, alamat, telepon);
         this.gaji = gaji;
     }
 

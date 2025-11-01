@@ -2,8 +2,8 @@ package minggu6.models;
 
 public class DosenTetap extends Dosen {
     private double gajiPokok;
-    public DosenTetap(String nik, String nama, String tempatLahir, String tanggalLahir, String alamat, String telepon, String departemen, double gajiPokok) {
-        super(nik, nama, tempatLahir, tanggalLahir, alamat, telepon, departemen);
+    public DosenTetap(int id, String nik, String nama, String tempatLahir, String tanggalLahir, String alamat, String telepon, String departemen, double gajiPokok) {
+        super(id, nik, nama, tempatLahir, tanggalLahir, alamat, telepon, departemen);
         this.gajiPokok = gajiPokok;
     }
     @Override

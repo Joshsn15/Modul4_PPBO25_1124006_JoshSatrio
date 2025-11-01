@@ -12,20 +12,23 @@ public class MahasiswaAddView {
 
 
     public void render() {
+        CLIUtil.getString();
         System.out.println("=== Add New Mahasiswa ===");
         System.out.print("NIM: ");
         String nim = CLIUtil.getString();
         System.out.print("Nama: ");
         String nama = CLIUtil.getString();
+        System.out.print("Jurusan: ");
+        String jurusan = CLIUtil.getString();
         System.out.print("Tempat Lahir: ");
         String tempatLahir = CLIUtil.getString();
-        System.out.print("Tanggal Lahir (dd-mm-yyyy): ");
+        System.out.print("Tanggal Lahir (yyyy-mm-dd): ");
         String tanggalLahir = CLIUtil.getString();
         System.out.print("Alamat: ");
         String alamat = CLIUtil.getString();
         System.out.print("Telepon: ");
         String telepon = CLIUtil.getString();
 
-        mahasiswaController.addNew(nim, nama, tempatLahir, tanggalLahir, alamat, telepon);
+        mahasiswaController.addNew(nama, nim, jurusan, tempatLahir, tanggalLahir, alamat, telepon);
     }
 }

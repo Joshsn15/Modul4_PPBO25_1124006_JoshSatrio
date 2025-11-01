@@ -2,8 +2,8 @@ package minggu6.models;
 
 public class DosenHonorer extends Dosen {
     private double HonorPerSks;
-    public DosenHonorer(String nik, String nama, String tempatLahir, String tanggalLahir, String alamat, String telepon, String departemen, double HonorPerSks) {
-        super(nik, nama, tempatLahir, tanggalLahir, alamat, telepon, departemen);
+    public DosenHonorer(int id, String nik, String nama, String tempatLahir, String tanggalLahir, String alamat, String telepon, String departemen, double HonorPerSks) {
+        super(id, nik, nama, tempatLahir, tanggalLahir, alamat, telepon, departemen);
         this.HonorPerSks = HonorPerSks;
     }
     @Override
